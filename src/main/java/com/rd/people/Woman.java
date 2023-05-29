@@ -1,3 +1,5 @@
+package com.rd.people;
+
 public class Woman extends Person{
 
     private String sex;
@@ -24,10 +26,12 @@ private String maidenName;
         this.sex = sex;
     }
 
-    public void isRetired(Person person){
+    public boolean isRetired(Person person){
         if (person.getAge() >= 60)
-            System.out.printf("The person %s %s is retired\n", person.getFirstName(), person.getLastName());
-        else  System.out.printf("The person %s %s is not retired\n", person.getFirstName(), person.getLastName());
+        {System.out.printf("The person %s %s is retired\n", person.getFirstName(), person.getLastName());
+            return true;}
+        else  {System.out.printf("The person %s %s is not retired\n", person.getFirstName(), person.getLastName());
+            return false;}
     };
 
     public void registerPartnership(Person man){
@@ -39,7 +43,5 @@ private String maidenName;
         this.setPartner(null);
         this.setLastName(this.getMaidenName());
     };
-    public void changeLastNameAfterDivorce(Woman woman){
-        woman.setLastName(woman.getMaidenName());
-    };
+
 }

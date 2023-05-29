@@ -1,4 +1,4 @@
-package people;
+package org.example;
 
 import com.rd.people.Man;
 import com.rd.people.Woman;
@@ -9,13 +9,13 @@ import org.testng.annotations.Test;
 public class ManTest {
     private Woman woman;
     private Man man;
-    @BeforeSuite
+    @BeforeSuite(groups = {"smoke"})
     public void creatingPeople(){
         woman = new Woman("FirstName", "LastName", 30);
         man = new Man("ManFirstName", "ManLastName", 40);
     }
 
-    @Test(groups = "smoke")
+    @Test(groups = {"smoke"})
     public void getFirstNameTest(){
         Assert.assertEquals(man.getFirstName(), "ManFirstName", "First name is wrong\n");
     }

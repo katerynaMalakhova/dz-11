@@ -1,4 +1,4 @@
-package people;
+package org.example;
 
 import com.rd.people.Woman;
 import com.rd.people.Man;
@@ -10,7 +10,7 @@ public class WomanTest {
 
 private Woman woman;
 private Man man;
-    @BeforeSuite
+    @BeforeSuite(groups = {"smoke"})
     public void creatingPeople(){
     woman = new Woman("FirstName", "LastName", 30);
     man = new Man("ManFirstName", "ManLastName", 40);

@@ -1,3 +1,5 @@
+package com.rd.people;
+
 public abstract class Person {
 
     private String firstName;
@@ -45,7 +47,7 @@ public abstract class Person {
         this.partner = partner;
     }
 
-    public abstract void isRetired(Person person);
+    public abstract boolean isRetired(Person person);
 
     public abstract void registerPartnership(Person partner);
 
